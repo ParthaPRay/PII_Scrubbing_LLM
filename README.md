@@ -84,14 +84,21 @@ This FastAPI-based service accepts text input and a model name, scrubs Personall
 
    If you're only using a local LLM (Ollama), you do not need these keys.
 
-3. **Run the Server:**
+   Run below (serial no. 4) for running FastAPI server on the same terminal.
+
+4. **Run the FastAPI Uvicron Server:**
    ```bash
    uvicorn __main__:app --host 0.0.0.0 --port 5000 --reload
+   ```
+   or
+
+   ```bash
+   python3 pii_scrub_ner_eng_hybrid.py
    ```
 
    This will start the FastAPI server on port 5000.
 
-4. **Database Setup:**
+5. **Database Setup:**
    - On the first run, `Base.metadata.create_all(bind=engine)` creates the `requests` table in `ollama_log.db`.
    - If you change the schema, remove or rename `ollama_log.db` before restarting to recreate the schema.
 
