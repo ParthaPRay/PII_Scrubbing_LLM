@@ -2,7 +2,11 @@
 
 # PII Scrubbing Service with spaCy NER and Flexible LLM Integration
 
-This FastAPI-based service accepts text input and a model name, scrubs Personally Identifiable Information (PII) using spaCy NER and regex patterns, then sends the sanitized input to a specified Large Language Model (LLM) endpoint. The results (including performance metrics, CPU usage, and PII detection details) are logged to both a local SQLite database and returned as a JSON response. Currently, the code supports legacy Text Completaions https://docs.anthropic.com/en/api/complete by Anthropic and chat completion https://platform.openai.com/docs/api-reference/chat by OpenAI. It supports text generation end point of Ollama.
+This FastAPI-based service accepts text input and a model name, scrubs Personally Identifiable Information (PII) using spaCy NER and regex patterns, then sends the sanitized input to a specified Large Language Model (LLM) endpoint. The results (including performance metrics, CPU usage, and PII detection details) are logged to both a local SQLite database and returned as a JSON response. 
+
+NER using Spacy is the Python-based Natural Language Processing task that focuses on detecting and categorizing named entities.
+
+Currently, the code supports legacy Text Completaions (https://docs.anthropic.com/en/api/complete) by Anthropic and chat completion (https://platform.openai.com/docs/api-reference/chat) by OpenAI. It supports text generation (https://github.com/ollama/ollama/blob/main/docs/api.md#generate-a-completion) of Ollama.
 
 ## Key Features
 
