@@ -1,6 +1,6 @@
 # PII Scrubbing Service with spaCy NER and Flexible LLM Integration (Local and Remote)
 
-This FastAPI-based service accepts text input and a model name, scrubs Personally Identifiable Information (PII) using spaCy NER and regex patterns, then sends the sanitized input to a specified Large Language Model (LLM) endpoint. The results (including performance metrics, CPU usage, and PII detection details) are logged to both a local SQLite database and returned as a JSON response. 
+This FastAPI-based service accepts text input and a model name, scrubs Personally Identifiable Information (PII) using spaCy Named Entity Recognition (NER) and regex patterns, then sends the sanitized input to a specified Large Language Model (LLM) endpoint. The results (including performance metrics, CPU usage, and PII detection details) are logged to both a local SQLite database and returned as a JSON response. 
 
 NER using Spacy is the Python-based Natural Language Processing task that focuses on detecting and categorizing named entities.
 
