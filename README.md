@@ -115,7 +115,7 @@ curl -X POST "http://127.0.0.1:5000/process" \
 export OPENAI_API_KEY="your_openai_api_key"
 curl -X POST "http://127.0.0.1:5000/process" \
 -H "Content-Type: application/json" \
--d '{"text": "John Doe has an email johndoe@example.com", "model": "gpt-4"}'
+-d '{"text": "John Doe has an email johndoe@example.com", "model": "gpt-4o-mini"}'
 ```
 
 **Anthropic (Claude):**
@@ -123,7 +123,7 @@ curl -X POST "http://127.0.0.1:5000/process" \
 export ANTHROPIC_API_KEY="your_anthropic_api_key"
 curl -X POST "http://127.0.0.1:5000/process" \
 -H "Content-Type: application/json" \
--d '{"text": "Alice from California, email alice123@gmail.com", "model": "claude-2"}'
+-d '{"text": "Alice from California, email alice123@gmail.com", "model": "claude-2.1"}'
 ```
 
 ## Entity Types and PII
