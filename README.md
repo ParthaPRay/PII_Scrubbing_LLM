@@ -62,7 +62,7 @@ Currently, the code supports legacy Text Completaions (https://docs.anthropic.co
 - SpaCy English model: `python -m spacy download en_core_web_sm`
 - Access to desired LLM endpoints (Ollama, OpenAI, Anthropic).  
 - Appropriate API keys set as environment variables (if using OpenAI or Anthropic).
-
+- For Ollama, first install it as per https://github.com/ollama/ollama and then pull or run some models.
 ## Running the Application
 
 1. **Install Dependencies:**
