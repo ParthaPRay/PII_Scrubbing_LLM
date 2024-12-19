@@ -1,0 +1,6 @@
+spacy 
+requests
+fastapi
+uvicorn
+psutil
+sqlalchemy
