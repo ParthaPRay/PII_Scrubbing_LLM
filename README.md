@@ -1,6 +1,3 @@
-# PII_Scrubbing_LLM
-This repo contains codes about PII scrubbing heuristics search before calling to LLM (local and external)
-
 # NER for PII Scrubbing using Ollama API
 
 # PII Scrubbing Service with spaCy NER and Flexible LLM Integration
