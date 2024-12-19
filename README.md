@@ -2,7 +2,7 @@
 
 # PII Scrubbing Service with spaCy NER and Flexible LLM Integration
 
-This FastAPI-based service accepts text input and a model name, scrubs Personally Identifiable Information (PII) using spaCy NER and regex patterns, then sends the sanitized input to a specified Large Language Model (LLM) endpoint. The results (including performance metrics, CPU usage, and PII detection details) are logged to both a local SQLite database and returned as a JSON response.
+This FastAPI-based service accepts text input and a model name, scrubs Personally Identifiable Information (PII) using spaCy NER and regex patterns, then sends the sanitized input to a specified Large Language Model (LLM) endpoint. The results (including performance metrics, CPU usage, and PII detection details) are logged to both a local SQLite database and returned as a JSON response. Currently, the code supports legacy Text Completaions https://docs.anthropic.com/en/api/complete by Anthropic and chat completion https://platform.openai.com/docs/api-reference/chat by OpenAI. It supports text generation end point of Ollama.
 
 ## Key Features
 
@@ -29,7 +29,7 @@ This FastAPI-based service accepts text input and a model name, scrubs Personall
 1. **Receive Request:**  
    The `/process` endpoint accepts a JSON payload with:
    - `text`: The user-provided text containing potential PII.
-   - `model`: The LLM model identifier (e.g., `"qwen2.5:0.5b-instruct-q4_K_M"`, `"gpt-4"`, `"claude-2"`).
+   - `model`: The LLM model identifier (e.g., `"qwen2.5:0.5b-instruct-q4_K_M"`, `"gpt-4o"`, `gpt-4o-mini`, `"claude-2.1"`).
 
 2. **Scrub PII:**
    - The code uses spaCy NER to find entities labeled as PII.  
@@ -56,7 +56,7 @@ This FastAPI-based service accepts text input and a model name, scrubs Personall
 ## System Requirements
 
 - Python 3.9+
-- `pip install fastapi uvicorn spacy requests sqlalchemy`
+- `pip install fastapi uvicorn spacy requests sqlalchemy` or `pip install -r requirements.txt`
 - SpaCy English model: `python -m spacy download en_core_web_sm`
 - Access to desired LLM endpoints (Ollama, OpenAI, Anthropic).  
 - Appropriate API keys set as environment variables (if using OpenAI or Anthropic).
